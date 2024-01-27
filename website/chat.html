@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chatbot Integration</title>
+        <link rel="stylesheet" type="text/css" href="chat.css">
+    </head>
+    
+<body>
+    <!-- Embed the Web Chat code here -->
+    <div id="webchat" role="main"></div>
+
+    <!-- Include the Web Chat script -->
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+
+    <script>
+        // Render the Web Chat control
+        const webChatElement = document.getElementById('webchat');
+        const botConnection = window.WebChat.createDirectLine({ token: '6b8a4134ff8a21015839dfb327f' }); // Replace 'YOUR_DIRECT_LINE_SECRET' with your actual Direct Line secret
+        window.WebChat.renderWebChat({
+            directLine: botConnection,
+            userID: 'HoyaHacks-Team12-User47@gocloudforce.com', // Optionally, provide a user ID
+            username: 'FkL9ZMwPYtGQ' // Optionally, provide a username
+        }, webChatElement);
+    </script>
+
+    <!-- Button to exit and redirect to Thank you.html -->
+    <h1>Done Chatting?</h1>
+    <button id="exitButton">Exit</button>
+
+    <!-- Script to handle the button click event -->
+    <script>
+        document.getElementById('exitButton').addEventListener('click', function() {
+            window.location.href = 'thank-you.html'; // Redirect to Thank you.html
+        });
+    </script>
+</body>
+</html>

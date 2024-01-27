@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+#formFillUp {
+    background-color: #fff;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="reset"],
+input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+input[type="reset"],
+input[type="submit"] {
+background-color: #4caf50;
+color: #fff;
+border: none;
+padding: 10px 15px; /* Adjust padding to your preference */
+text-transform: uppercase;
+cursor: pointer;
+border-radius: 4px;
+transition: background-color 0.3s;
+width: auto; /* Set width to auto to adjust according to content */
+}
+
+.button-container {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+}
+
+.button-container input[type="reset"],
+.button-container input[type="submit"] {
+flex: none; /* Don't allow flex to stretch buttons */
+margin: 0;
+width: calc(50% - 5px); /* Adjust width of buttons */
+}
