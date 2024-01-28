@@ -69,7 +69,7 @@ The Chatbot Integration allows users to interact with a chatbot to get assistanc
 - HTML
 - CSS
 - JavaScript
-- Chatbot SDK/API (Microsoft Bot Framework)
+- Chatbot SDK/API (Microsoft Azure OpenAi / Copilot Studio)
 
 ## Installation and Usage
 
