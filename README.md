@@ -98,7 +98,7 @@ Contributions to improve and enhance these web applications are welcome! To cont
 
 - Abhishek Nepal
 - Sneha Joshi
-- Ha Le Nguyen
+- Ha Le
 
 ## License
 
