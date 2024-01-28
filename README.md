@@ -96,9 +96,9 @@ Contributions to improve and enhance these web applications are welcome! To cont
 
 ## Creators
 
-- Abhishek Nepal
-- Sneha Joshi
-- Ha Le
+- Abhishek Nepal - Marymount University - a0n84290@marymount.edu
+- Sneha Joshi - Marymount University - s0j66388@marymount.edu
+- Ha Le - George Mason University - hle37@gmu.edu
 
 ## License
 
