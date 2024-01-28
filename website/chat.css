@@ -1,22 +1,28 @@
-/* chat.css */
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-/* Chat container */
+/* Chat Container */
 .chat-container {
-    width: 400px; /* Adjust the width as needed */
-    height: 500px; /* Adjust the height as needed */
+    width: 400px;
+    height: 500px;
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
+    margin: 20px auto;
 }
 
-/* Chat messages container */
+/* Chat Messages Container */
 .chat-messages {
     overflow-y: auto;
-    height: calc(100% - 40px); /* Adjust based on other elements' heights */
+    height: calc(100% - 40px);
     padding: 10px;
 }
 
-/* Individual chat message */
+/* Individual Chat Message */
 .chat-message {
     background-color: #f0f0f0;
     border-radius: 8px;
@@ -24,7 +30,7 @@
     margin-bottom: 10px;
 }
 
-/* User input area */
+/* User Input Area */
 .user-input {
     padding: 10px;
     display: flex;
@@ -33,7 +39,7 @@
     background-color: #fff;
 }
 
-/* Input field */
+/* Input Field */
 .input-field {
     flex-grow: 1;
     border: 1px solid #ccc;
@@ -42,7 +48,7 @@
     margin-right: 10px;
 }
 
-/* Send button */
+/* Send Button */
 .send-button {
     background-color: #007bff;
     color: #fff;
@@ -52,7 +58,7 @@
     cursor: pointer;
 }
 
-/* Exit button */
+/* Exit Button */
 .exit-button {
     background-color: #dc3545;
     color: #fff;
@@ -63,14 +69,13 @@
     margin-top: 10px;
 }
 
-/* Styling for the "Done Chatting?" header */
+/* Styling for the "Done Chatting?" Header */
 .exit-header {
     margin-top: 20px;
     text-align: center;
 }
 
-/* Custom styling for scrollbars */
-/* Note: This is optional and may not work on all browsers */
+/* Custom Styling for Scrollbars */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -82,4 +87,62 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
+}
+
+/* Chatbot Specific Styles */
+/* Header */
+.pages-chatbot-header {
+    background: #77a145;
+    color: #ffffff;
+}
+
+/* Height and Width */
+.pva-embedded-web-chat[data-minimized='false'] {
+    height: 80%;
+    width: 25%;
+    max-width: 400px;
+    max-height: 740px;
+}
+
+/* Bot Window */
+.pva-embedded-web-chat-window {
+    background: white;
+}
+
+/* Bubble from Bot */
+.webchat__bubble:not(.webchat__bubble--from-user) .webchat__bubble__content {
+    background-color: #77a145 !important;
+    border-radius: 5px !important;
+}
+
+.webchat__bubble:not(.webchat__bubble--from-user) p {
+    color: #ffffff;
+}
+
+/* Bubble from User */
+.webchat__bubble.webchat__bubble--from-user .webchat__bubble__content {
+    background-color: #797d81 !important;
+    border-radius: 5px !important;
+}
+
+.webchat__bubble.webchat__bubble--from-user p {
+    color: #ffffff;
+}
+
+/* Reference Links */
+.webchat__link-definitions__badge,
+.webchat__link-definitions__list-item-text,
+.webchat__render-markdown__pure-identifier {
+    color: blue !important;
+}
+
+/* Privacy Message */
+.pva-privacy-message {
+    background: #797d81;
+}
+
+.pva-privacy-message p {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
 }

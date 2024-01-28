@@ -1,20 +1,37 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Chatbot Integration</title>
-        <link rel="stylesheet" type="text/css" href="chat.css">
-    </head>
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Integration</title>
+    <link rel="stylesheet" type="text/css" href="path/to/your/chat.css">
+</head>
 <body>
-    <!-- Embed the Web Chat code here -->
-    <div id="webchat" role="main"></div>
+    <!-- Chat Container -->
+    <div class="chat-container">
+        <!-- Chat Messages Container -->
+        <div class="chat-messages" id="chatMessages">
+            <!-- Chat messages will be appended here -->
+        </div>
+
+        <!-- User Input Area -->
+        <div class="user-input">
+            <input type="text" class="input-field" id="userInput" placeholder="Type your message...">
+            <button class="send-button" id="sendButton">Send</button>
+        </div>
+    </div>
+
+    <!-- New section for the iframe -->
+    <div>
+        <iframe src="https://copilotstudio.microsoft.com/environments/Default-c85487db-d5f3-45e1-9158-876d58525ccf/bots/crb0b_chatmary/webchat?__version__=2" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+    </div>
 
     <!-- Include the Web Chat script -->
     <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
 
     <script>
         // Render the Web Chat control
-        const webChatElement = document.getElementById('webchat');
+        const webChatElement = document.getElementById('chatMessages');
         const botConnection = window.WebChat.createDirectLine({ token: '6b8a4134ff8a21015839dfb327f' }); // Replace 'YOUR_DIRECT_LINE_SECRET' with your actual Direct Line secret
         window.WebChat.renderWebChat({
             directLine: botConnection,
@@ -23,9 +40,20 @@
         }, webChatElement);
     </script>
 
+    <!-- Script to handle sending messages -->
+    <script>
+        document.getElementById('sendButton').addEventListener('click', function() {
+            const userInput = document.getElementById('userInput').value;
+            const webChat = document.querySelector('.webchat__basic-transcript');
+            webChat.querySelector('input[type="text"]').value = userInput;
+            webChat.querySelector('form').dispatchEvent(new Event('submit'));
+            document.getElementById('userInput').value = '';
+        });
+    </script>
+
     <!-- Button to exit and redirect to Thank you.html -->
-    <h1>Done Chatting?</h1>
-    <button id="exitButton">Exit</button>
+    <h1 class="exit-header">Done Chatting?</h1>
+    <button class="exit-button" id="exitButton">Exit</button>
 
     <!-- Script to handle the button click event -->
     <script>
